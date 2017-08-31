@@ -1,0 +1,16 @@
+input[type="checkbox"] {
+    display:none;
+}
+
+header input[type="checkbox"] + span {
+    display:inline-block;
+    width:13px;
+    height:13px;
+    margin:0 8px 0 0;
+    vertical-align:middle;
+    background:url(../img/checkbox.svg) left top no-repeat;
+    cursor:pointer;
+}
+header input[type="checkbox"]:checked + span {
+    background:url(../img/checkbox-checked.svg) left top no-repeat;
+}

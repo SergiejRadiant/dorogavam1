@@ -1,0 +1,150 @@
+@import "bourbon"
+@import "vars.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+.tizers
+	padding-top: 120px
+	background: url(../img/tizers-bg.png) center no-repeat
+	&-item
+		display: inline-block
+		margin-bottom: 100px
+		h4
+			font: 19px "RobotoLight", sans-serif
+			font-weight: normal
+			padding-left: 25px
+
+.pay-methods
+	h3
+		margin:
+			top: 22px
+			bottom: 30px
+	&-item
+		text-align: center
+		margin-bottom: 54px
+		img
+			height: 114px
+			width: auto
+			margin-bottom: 44px
+
+footer
+	color: #919191
+	font: 13px "PTSans", sans-serif
+	background-color: #eff3f6
+	box-shadow: inset 0 0 4px rgba(0,0,0,.25)
+	.logo
+		position: relative
+		top: 30px
+		left: -15px
+		margin-bottom: 25px
+		display: inline-block
+		img
+			width: 200px
+			height: 188px
+	h4
+		color: #707270
+		font: 13px "PTSans", sans-serif
+		font-weight: 600
+		margin-bottom: 15px
+	p
+		margin-bottom: 10px
+
+	.footer-contacts,
+	.footer-social
+		display: inline-block
+		position: relative
+		margin: 50px 0
+
+	.footer-contacts
+		color: $text-color
+		font: 16px "RobotoLight", sans-serif
+		&-item
+			margin-bottom: 30px
+			&.edge
+				margin-right: 0
+		i
+			color: $accent-color
+			font-size: 20px
+			margin-right: 14px
+			opacity: .5
+		p,
+		a
+			font-size: 15px
+		span
+			font-size: 17px
+
+	.footer-social
+		margin-bottom: 30px
+		ul
+			li
+				float: left
+				a
+					display: inline-block
+					margin-right: 4px
+					&:hover
+						opacity: .4
+					img
+						height: 34px
+						width: auto
+	
+	.autograph
+		display: inline-block
+		margin-bottom: 50px
+		img
+			width: 150px
+			height: 28px
+
+	.footer-bottom-line
+		background-color: #4b4b4b
+		padding: 15px 0
+		ul
+			display: inline-block
+			li
+				float: left
+				margin-right: 28px
+				a
+					color: #dcdcdc
+					font: 14px "RobotoLight", sans-serif
+					text-transform: uppercase
+					&:hover
+						text-decoration: underline
+
+		p
+			color: #9b9a9a
+			font: 12px "RobotoRegular", sans-serif
+			margin-bottom: 0
+
+			
+
+
+
+//ALWAYS END
+@import "media"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/font-awesome/css/font-awesome.min"
+@import "app/libs/mobile-menu/css/mobile-menu"
+@import "app/libs/checkbox-styles/checkbox-styles"

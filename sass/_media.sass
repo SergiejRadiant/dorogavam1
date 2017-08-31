@@ -1,0 +1,153 @@
+@import "bourbon"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.footer-contacts-item
+		float: left
+		margin-right: 60px
+		&.edge
+			margin-right: 0
+		span
+			font-size: 15px!important
+
+		
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	header
+		.logo
+			left: 0
+			img
+				width: 300px!important
+				height: 96px!important
+		.contacts-bar
+			top: 36px
+		.phone,
+		.email
+			p
+				font-size: 17px
+			span
+				font-size: 17px
+			a
+				font-size: 16px
+		.email
+			margin-top: 4px
+		
+		.form-wraper
+			text-align: center
+	
+	footer
+		.logo
+			left: 0
+	.footer-contacts
+		float: right
+	.footer-social
+		float: left
+		margin: 14px
+			top: 14px!important
+			right: 40%!important
+		h4
+			display: none
+		img
+			height: 38px!important
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	header
+		background-position: 25% 0
+		.contacts-bar
+			text-align: left
+			float: left
+			margin: 0 auto
+			.phone,
+			.email
+				p
+					margin-bottom: 3px
+					color: $text-color
+				span
+					opacity: 1
+				a
+					color: $text-color
+					&:hover,
+					&:focus,
+					&:active
+						color: $accent-color
+						opacity: 1
+
+	.main-nav
+		ul
+			display: none
+
+	.footer-contacts
+		float: left
+		margin-bottom: 20px!important
+	.footer-social
+		float: none
+		margin:
+			top: 0!important
+			right: 0!important
+			bottom: 50px!important
+
+	/*Disable Animation on Mobile Devices*/
+	// .animated
+	// 	/*CSS transitions*/
+	// 	-o-transition-property: none !important
+	// 	-moz-transition-property: none !important
+	// 	-ms-transition-property: none !important
+	// 	-webkit-transition-property: none !important
+	// 	transition-property: none !important
+	// 	/*CSS transforms*/
+	// 	-o-transform: none !important
+	// 	-moz-transform: none !important
+	// 	-ms-transform: none !important
+	// 	-webkit-transform: none !important
+	// 	transform: none !important
+	// 	/*CSS animations*/
+	// 	-webkit-animation: none !important
+	// 	-moz-animation: none !important
+	// 	-o-animation: none !important
+	// 	-ms-animation: none !important
+	// 	animation: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

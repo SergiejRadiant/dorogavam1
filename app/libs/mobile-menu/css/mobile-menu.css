@@ -1,0 +1,54 @@
+button.menu::before {
+	content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: tranparent;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 24px 24px;
+	background-image: url(../img/menu-button.svg);
+}
+button.menu[aria-expanded="true"]::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: tranparent;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 24px 24px;
+  background-image: url(../img/menu-close-button.svg);
+}
+
+[aria-hidden="false"] {
+	display: block;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+nav ul li {
+  text-align: left;
+}
+nav ul li a {
+  padding: .8em 1.5em;
+  text-decoration: none;
+  display: block; 
+}
+
+@media screen and (min-width: 768px) {
+  button.menu {
+  	display: none;
+  }
+}
