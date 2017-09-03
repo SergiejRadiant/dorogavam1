@@ -47,6 +47,10 @@ h4
 
 a
 	color: $text-color
+	transition: all .5s ease
+	&:hover
+		color: $accent-color
+		opacity: .7
 	&:focus,
 	&:hover,
 	&:active
@@ -62,6 +66,25 @@ ul
 	margin: 0
 	padding: 0
 	list-style-type: none
+
+.social
+	a
+		position: relative
+		display: inline-block
+		&::before
+			content: ''
+			height: 100%
+			width: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background-color: #fff
+			opacity: 0
+			transition: opacity .7s ease
+		&:hover
+			opacity: 1
+			&::before
+				opacity: .7
 
 .button 
 	display: inline-block
@@ -145,6 +168,8 @@ form
 		color: $accent-color
 		text-decoration: underline
 		opacity: .7
+		&:hover
+			color: lighten($accent-color, 15%)
 
 header
 	height: 764px

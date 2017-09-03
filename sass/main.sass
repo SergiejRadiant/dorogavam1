@@ -116,8 +116,6 @@ footer
 				a
 					display: inline-block
 					margin-right: 4px
-					&:hover
-						opacity: .4
 					img
 						height: 34px
 						width: auto
@@ -256,6 +254,60 @@ footer
 
 	&:nth-child(even)
 		background-color: #f5f5f5
+
+.contacts-section
+	padding: 35px 0
+	&::before
+		content: ''
+		width: 1px
+		height: 380px
+		position: absolute
+		left: 55%
+		background-color: #d1d1d1
+
+	&-item
+		position: relative
+		padding-left: 40px
+		margin-bottom: 24px
+		p, a
+			font-size: 20px
+			span
+				font-size: 22px
+		img
+			position: absolute
+			left: 0
+			top: 4px
+		&.adress
+			margin: 61px 0 64px 0
+			p
+				font-size: 23px
+			img
+				left: 0
+		&.time
+			img
+				left: 15px
+		&.time,
+		&.adress
+			padding-left: 80px
+			p
+				padding-top: 3px
+			img
+				top: 0
+				opacity: .9
+	.social
+		position: relative
+		margin: 46px 0
+		li
+			float: left
+			margin: 0 8px 80px 0
+			img
+				width: 41px
+				height: 41px
+				border-radius: 2px
+				box-shadow: -3px 3px 0 rgba(0,0,0,.14)
+
+
+
 
 
 

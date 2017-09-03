@@ -1,4 +1,27 @@
 $(function() {
+  
+	ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [51.646769, 39.160660],
+            zoom: 14
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            iconCaption: 'Воронеж, ул. Ворошилова, 41А, оф.19',
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            // iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            // iconImageHref: 'images/myIcon.gif',
+            // iconImageSize: [30, 42],
+            preset: 'islands#redDotIconWithCaption',
+            iconCaptionMaxWidth: 256
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+	});
 
 	$('.image-popup-no-margins').magnificPopup({
 		type: 'image',
