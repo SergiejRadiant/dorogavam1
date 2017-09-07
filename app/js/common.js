@@ -1,5 +1,5 @@
 $(function() {
-  
+
 	ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [51.646769, 39.160660],
@@ -21,6 +21,8 @@ $(function() {
         });
 
     myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
+
 	});
 
 	$('.image-popup-no-margins').magnificPopup({

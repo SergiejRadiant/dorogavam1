@@ -68,14 +68,16 @@ footer
 	background-color: #eff3f6
 	box-shadow: inset 0 0 4px rgba(0,0,0,.25)
 	.logo
+		width: 200px
+		height: auto
 		position: relative
 		top: 30px
 		left: -15px
 		margin-bottom: 25px
 		display: inline-block
 		img
-			width: 200px
-			height: 188px
+			width: 100%
+			height: 100%
 	h4
 		color: #707270
 		font: 13px "PTSans", sans-serif
@@ -119,6 +121,8 @@ footer
 					img
 						height: 34px
 						width: auto
+					&::before
+						background-color: #eff3f6
 	
 	.autograph
 		display: inline-block
@@ -128,7 +132,7 @@ footer
 			height: 28px
 
 	.footer-bottom-line
-		background-color: #4b4b4b
+		background-color: $accent-color-2
 		padding: 15px 0
 		ul
 			display: inline-block
@@ -178,7 +182,7 @@ footer
 			height: 100%
 			background: rgba(255,255,255,.8) url(../img/docs-hover-icon.svg) center no-repeat
 			background-size: 57px 57px
-			transition: all .5s ease
+			transition: opacity .1s ease
 			opacity: 0
 			z-index: 1
 		&:hover
@@ -236,9 +240,8 @@ footer
 				background-color: lighten($accent-color, 7%)
 
 .reviews-item
-	padding: 20px 0 11px 0
+	padding: 15px 0 7px 0
 	h4
-		font-size: 16px
 		font-family: "RobotoLight", sans-serif
 		text-transform: none
 		margin-bottom: 7px
@@ -264,48 +267,160 @@ footer
 		position: absolute
 		left: 55%
 		background-color: #d1d1d1
-
-	&-item
-		position: relative
-		padding-left: 40px
-		margin-bottom: 24px
+	h2.kostyl
+		margin-bottom: 63px
+	table tr td:first-child
+		text-align: right
+	tr.wide td p:last-child,
+	tr.wide td a:last-child
+		margin-bottom: 47px
+	td p:last-child,
+	td a:last-child
+		margin-bottom: 30px
+	td
+		vertical-align: top
 		p, a
+			display: block
 			font-size: 20px
-			span
-				font-size: 22px
+		span
+			font-size: 23px
+		img.big
+			top: -5px
+			margin-right: 26px
+			opacity: .9
 		img
-			position: absolute
-			left: 0
-			top: 4px
-		&.adress
-			margin: 61px 0 64px 0
-			p
-				font-size: 23px
-			img
-				left: 0
-		&.time
-			img
-				left: 15px
-		&.time,
-		&.adress
-			padding-left: 80px
-			p
-				padding-top: 3px
-			img
-				top: 0
-				opacity: .9
+			width: 26px
+			height: auto
+			position: relative
+			top: 1px
+			margin-right: 17px
+		
 	.social
 		position: relative
-		margin: 46px 0
 		li
 			float: left
-			margin: 0 8px 80px 0
+			margin: 34px 10px 70px 0
 			img
-				width: 41px
-				height: 41px
+				width: 48px
+				height: 48px
 				border-radius: 2px
 				box-shadow: -3px 3px 0 rgba(0,0,0,.14)
 
+.services-menu
+	margin-bottom: 25px
+	border-radius: 6px
+	background-color: #f2f2f2
+	box-shadow: inset 0 0 15px rgba(0,0,0,.04)
+	li
+		position: relative
+		a
+			display: inline-block
+		>ul
+			background-color: #ebeaea
+			box-shadow: inset 0 0 10px rgba(0,0,0,.04)
+			img
+				width: 18px
+				height: auto
+				margin: 0 13px
+			a
+				font-size: 16px
+				margin: 10px 13px 12px 0
+				&::before
+					content: ''
+					width: 100%
+					height: 100%
+					position: absolute
+					top: 0
+					left: 0
+					background-color: $accent-color-2
+					opacity: 0
+					transition: opacity .2s ease
+				&:hover
+					color: $text-color
+					opacity: 1
+					&::before
+						opacity: .04
+		&::after
+			content: ''
+			width: 88%
+			height: 1px
+			position: absolute
+			left: 6%
+			bottom: 0
+			background-color: #e5e5e5
+	>li
+		>div
+			i
+				color: $accent-color-2
+				font-size: 52px
+				line-height: 1
+				margin-left: 0
+				transition: color .2s ease
+			a
+				font: 13px/1.4 "PTSans", sans-serif
+				margin: 14px 12px 12px 0
+				text-transform: uppercase
+				&::before
+					content: ''
+					width: 100%
+					height: 100%
+					position: absolute
+					top: 0
+					left: 0
+					background-color: $accent-color-2
+					opacity: 0
+					transition: opacity .2s ease
+				&:hover
+					color: $text-color
+					opacity: 1
+					&::before
+						opacity: .04
+		&:hover
+			i
+				color: lighten(#58c473, 5%)
+		&.active
+			border-radius: 6px 6px 0 0
+			background-color: $accent-color-2
+			box-shadow: inset 0 0 24px rgba(0,0,0,.15)
+			>div
+				i
+					color: #f2f2f2
+				a
+					color: #f2f1f1
+					font-weight: 600
+					&:hover
+						&::before
+							display: none
+			&::after
+				display: none
+			&:hover
+				>div
+					i
+						color: #f2f2f2
+		&:last-child
+			&:hover
+				&::before
+					border-radius: 0 0 6px 6px 
+	
+.services-content-box
+	position: relative
+	overflow: hidden
+	padding: 0 0 20px 30px
+	.img-wrap
+		width: 100%
+		height: 279px
+		position: relative
+		margin-bottom: 28px
+		border-radius: 6px
+		overflow: hidden
+		img
+			width: 100%
+			height: auto
+			position: relative
+			top: -50%
+
+
+			
 
 
 
@@ -325,3 +440,4 @@ footer
 @import "app/libs/checkbox-styles/checkbox-styles"
 @import "app/libs/magnific-popup/dist/magnific-popup"
 @import "app/libs/magnific-popup/dist/mySettings"
+@import "app/libs/myIconfont/css/dorogavam-services-iconfont"

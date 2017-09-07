@@ -3,16 +3,6 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	.footer-contacts-item
-		float: left
-		margin-right: 50px
-		&.edge
-			margin-right: 0
-		span
-			font-size: 15px!important
-
-		
 
 
 /* Medium Devices, Desktops */
@@ -35,42 +25,51 @@
 				font-size: 16px
 		.email
 			margin-top: 4px
-		
 		.form-wraper
 			text-align: center
+			form
+				opacity: .97
 	
 	footer
 		.logo
+			width: 225px
 			left: 0
+
 	.footer-contacts
 		float: right
 	.footer-social
 		float: left
 		margin: 14px
 			top: 14px!important
-			right: 40%!important
+			right: 30%!important
 		h4
 			display: none
 		img
 			height: 38px!important
 
+	.footer-contacts-item a,
+	.footer-contacts-item p
+		font-size: 17px!important
+		span
+			font-size: 18px!important
+
 	.contacts-section
 		&::before
 			display: none
-		&-item.adress,
-		&-item.time
-			padding-left: 40px
-			margin: 0 0 24px 0
-			p
-				font-size: 20px
-				padding-top: 0
+		h2.mbplus
+			margin-bottom: 30px
+		tr.wide td p:last-child,
+		tr.wide td a:last-child
+			margin-bottom: 25px
+		tr
 			img
-				width: 24px!important
-				height: 24px!important
-				left: 0
-				top: 4px
-		&-item.time
-			margin-bottom: 70px
+				width: 26px!important
+				top: 1px!important
+				margin-right: 17px!important
+				opacity: 1!important
+			span
+				font-size: 20px
+
 
 
 /* Small Devices, Tablets */
