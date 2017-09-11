@@ -1,28 +1,48 @@
 $(function() {
 
-	ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [51.646769, 39.160660],
-            zoom: 14
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            iconCaption: 'Воронеж, ул. Ворошилова, 41А, оф.19',
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            // iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            // iconImageHref: 'images/myIcon.gif',
-            // iconImageSize: [30, 42],
-            preset: 'islands#redDotIconWithCaption',
-            iconCaptionMaxWidth: 256
-        });
 
-    myMap.geoObjects.add(myPlacemark);
-    myMap.behaviors.disable('scrollZoom');
+	jQuery(document).ready(function(){
+		jQuery('ul.sf-menu').supersubs({
+			minWidth:	12,	 // minimum width of submenus in em units
+			maxWidth:	34,	 // maximum width of submenus in em units
+			extraWidth:	1	 // extra width can ensure lines don't sometimes turn over
+							 // due to slight rounding differences and font-family
+		}).superfish();		 // call supersubs first, then superfish, so that subs are
+							 // not display:none when measuring. Call before initialising
+							 // containing tabs for same reason.
+	});
 
+
+	function setEqualHeight(columns) {
+		
+		var tallestcolumn = 0;
+		columns.each(function() {
+			currentHeight = $(this).height();
+				if(currentHeight > tallestcolumn) {
+				tallestcolumn = currentHeight;
+			}
+		});
+		columns.height(tallestcolumn);
+	}
+
+	$(document).ready(function() {
+	setEqualHeight($(".services-menu > li > div"));
+	});
+
+	$('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+
+		fixedContentPos: false,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+		
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
 	});
 
 	$('.image-popup-no-margins').magnificPopup({

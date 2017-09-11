@@ -48,11 +48,11 @@
 			
 			<div class="row">
 		
-				<div class="col-md-5 col-sm-5  col-xs-12">
+				<div class="col-md-6 col-sm-6  col-xs-12">
 					<a href="#" class="logo"><img src="img/logo.png" alt=""></a>
 				</div>
 
-				<div class="col-md-7 col-sm-7 col-xs-12">
+				<div class="col-md-6 col-sm-6 col-xs-12">
 
 					<div class="contacts-bar">
 
@@ -63,11 +63,11 @@
 							</div>
 
 							<div class="cell">
-								<p><span>8 (919)</span> 189-45-16,</p> 
+								<a href="tel:88007754639"><span>8 (800)</span> 775-46-39</a> 
 							</div>
 
 							<div class="cell">
-								<p><span>8 (919)</span> 189-45-16</p> 
+								<a href="tel:89191894516"><span>8 (919)</span> 189-45-16</a> 
 							</div>
 
 						</div>
@@ -76,7 +76,7 @@
 
 						<div class="email">
 							<i class="fa fa-envelope-o"></i>
-							<a href="#">info.dorogavam.ru</a>
+							<a href="mailto:info.dorogavam.ru">info.dorogavam.ru</a>
 						</div>
 
 					</div>
@@ -94,20 +94,15 @@
 							<p>Заполните форму и наш менеджер свяжется с Вами через <span>15 минут</span></p>
 							<label>
 								<p>Ваше имя:</p>
-								<input type="text">
+								<input type="text" name="name">
 							</label>
 							<label>
 								<p>Ваш телефон:</p>
-								<input type="text">
+								<input type="text" name="tel" required>
 							</label>
-							<div class="user-agreement">
-								<div class="cell">
-									<input type="checkbox"></input>
-									<span></span>
-								</div>
-								<div class="cell">
-									<p>Принимаю условия <a href="#">Пользовательского соглашения</a></p>
-								</div>
+							<div class="ConfirmRules-wrap">
+								<input type="checkbox" id="ConfirmRules" Name="ConfirmRules" class="checkbox" required>
+								<label for="ConfirmRules">Принимаю условия <a href="#">Пользовательского соглашения</a></label>
 							</div>
 							<button class="button">Отправить заявку</button>
 						</form>
@@ -133,9 +128,29 @@
 						<button class="menu">Меню</button>
 					</div>
 					
-					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li class="active"><a href="services.html">Услуги</a></li>
+					<ul class="sf-menu">
+						<li class="active"><a href="index.html">Главная</a></li>
+						<li>
+							<a href="services.html">Услуги</a>
+							<ul>
+								<li>
+									<a href="avtoperevozki.html">Автоперевозки в разных направлениях</a>
+									<ul>
+										<li><a href="avtoperevozki_po_voronezhu.html">По Воронежу</a></li>
+										<li><a href="avtoperevozki_po_voronezhu.html">По Воронежской Области</a></li>
+										<li><a href="avtoperevozki_po_voronezhu.html">По России</a></li>
+										<li><a href="avtoperevozki_po_voronezhu.html">Страны СНГ</a></li>
+										<li><a href="avtoperevozki_po_voronezhu.html">Страны Европы</a></li>
+									</ul>
+								</li>
+								<li><a href="avtoperevozki.html">Доставка попутных грузов</a></li>
+								<li><a href="avtoperevozki.html">Перевозка негабаритных грузов</a></li>
+								<li><a href="avtoperevozki.html">Перевозка сборных грузов</a></li>
+								<li><a href="avtoperevozki.html">Перевозка опасных грузов</a></li>
+								<li><a href="avtoperevozki.html">Рефрежираторные перевозки</a></li>
+								<li><a href="avtoperevozki.html">Страхование грузов</a></li>
+							</ul>
+						</li>
 						<li><a href="documents.html">Документы</a></li>
 						<li><a href="reviews.html">Отзывы</a></li>
 						<li><a href="contacts.html">Контакты</a></li>
@@ -151,74 +166,32 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="page-name">Услуги</h2>
+					<h2 class="page-name"><span>Услуги</span></h2>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section>
+	<section class="services">
 		<div class="container">
 			<div class="row">
 				
 				<div class="col-md-3">
 					<ul class="services-menu">
-						<li class="active">
+						<li>
 							<div class="middle cell">
 								<i class="icon-1"></i>
 							</div>
 							<div class="middle cell">
-								<a href="#">Автоперевозки в разных направлениях</a>
+								<a href="avtoperevozki.html">Автоперевозки в разных направлениях</a>
 							</div>
-							<ul>
-								<li>
-									<div class="middle cell">
-										<img src="img/services-clover-icon.svg" alt="img/services-clover-icon.svg">
-									</div>
-									<div class="middle cell">
-										<a href="#">По Воронежу</a>
-									</div>
-								</li>
-								<li>
-									<div class="middle cell">
-										<img src="img/services-clover-icon.svg" alt="img/services-clover-icon.svg">
-									</div>
-									<div class="middle cell">
-										<a href="#">По Воронежской Области</a>
-									</div>
-								</li>
-								<li>
-									<div class="middle cell">
-										<img src="img/services-clover-icon.svg" alt="img/services-clover-icon.svg">
-									</div>
-									<div class="middle cell">
-										<a href="#">По России</a>
-									</div>
-								</li>
-								<li>
-									<div class="middle cell">
-										<img src="img/services-clover-icon.svg" alt="img/services-clover-icon.svg">
-									</div>
-									<div class="middle cell">
-										<a href="#">Страны СНГ</a>
-									</div>
-								</li>
-								<li>
-									<div class="middle cell">
-										<img src="img/services-clover-icon.svg" alt="img/services-clover-icon.svg">
-									</div>
-									<div class="middle cell">
-										<a href="#">Страны Европы</a>
-									</div>
-								</li>
-							</ul>
 						</li>
 						<li>
 							<div class="middle cell">
 								<i class="icon-2"></i>
 							</div>
 							<div class="middle cell">
-								<a href="#">Автоперевозки в разных направлениях</a>
+								<a href="avtoperevozki.html">Доставка попутных грузов</a>
 							</div>
 						</li>
 						<li>
@@ -226,7 +199,7 @@
 								<i class="icon-3"></i>
 							</div>
 							<div class="middle cell">
-								<a href="#">Автоперевозки в разных направлениях</a>
+								<a href="avtoperevozki.html">Перевозка негабаритных грузов</a>
 							</div>
 						</li>
 						<li>
@@ -234,7 +207,7 @@
 								<i class="icon-4"></i>
 							</div>
 							<div class="middle cell">
-								<a href="#">Автоперевозки в разных направлениях</a>
+								<a href="avtoperevozki.html">Перевозка сборных грузов</a>
 							</div>
 						</li>
 						<li>
@@ -242,7 +215,7 @@
 								<i class="icon-5"></i>
 							</div>
 							<div class="middle cell">
-								<a href="#">Автоперевозки в разных направлениях</a>
+								<a href="avtoperevozki.html">Перевозка опасных грузов</a>
 							</div>
 						</li>
 						<li>
@@ -250,7 +223,7 @@
 								<i class="icon-6"></i>
 							</div>
 							<div class="middle cell">
-								<a href="#">Автоперевозки в разных направлениях</a>
+								<a href="avtoperevozki.html">Рефрежираторные перевозки</a>
 							</div>
 						</li>
 						<li>
@@ -258,17 +231,17 @@
 								<i class="icon-7"></i>
 							</div>
 							<div class="middle cell">
-								<a href="#">Автоперевозки в разных направлениях</a>
+								<a href="avtoperevozki.html">Страхование грузов</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 
 				<div class="col-md-9">
-					<div class="services-content-box">
-						<h2>Автоперевозки в разных направлениях</h2>
+					<div class="text-block">
+						<h2>Вводный текст</h2>
 						<div class="img-wrap">
-							<img src="img/services-photo.jpg" alt="services-photo.jpg">
+							<img src="img/services-photo.jpg" alt="services-photo.jpg"> 
 						</div>
 						<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Мир предупредила дорогу своих, вскоре гор необходимыми решила ты точках деревни бросил страна свой наш сбить маленькая снова запятой даже снова однажды всемогущая использовало. Lorem вопроса грустный себя города безопасную прямо это предупредила назад запятых алфавит семантика свой, эта единственное сих ручеек одна он маленькая, силуэт свою. Рот речью жизни, грамматики живет парадигматическая. Запятой грамматики за свой. Подзаголовок составитель, пунктуация текст! Но парадигматическая ручеек путь заглавных живет свое языком возвращайся заманивший себя пустился, за они языкового скатился сих рекламных ему снова рыбного, это по всей, составитель пояс. Речью родного себя семантика!</p>
 						<h3>Подзаголовок</h3>
@@ -310,8 +283,8 @@
 											<i class="fa fa-phone"></i>
 										</div>
 										<div class="cell top">
-											<p><span>8 (919) 189-45-16</span></p>
-											<p><span>8 (800) 775-46-39</span></p>
+											<a href="tel:89191894516"><span>8 (919) 189-45-16<br></span></a>
+											<a href="tel:88007754639"><span>8 (800) 775-46-39</span></a>
 										</div>
 									</div>
 
@@ -320,7 +293,7 @@
 											<i class="fa fa-envelope-o"></i>
 										</div>
 										<div class="cell top">
-											<a href="#">info.dorogavam.ru</a>
+											<a href="mailto:info.dorogavam.ru">info.dorogavam.ru</a>
 										</div>
 									</div>
 

@@ -15,9 +15,12 @@ body
 	display: none
 
 h1
-	font: 27px/42px "RobotoThin", sans-serif
+	color: lighten($text-color, 3%)
+	font: 23px/1.5 RobotoRegular,sans-serif
+	text-shadow: 0 1px 2px rgba(0,0,0,.2)
 	font-weight: normal
-	margin-bottom: 20px
+	margin-top: 0
+	margin-bottom: 33px
 
 h2,
 h3,
@@ -30,9 +33,24 @@ h2
 	font-size: 21px
 	margin-bottom: 25px
 	&.page-name
-		font: 24px/1 "RobotoThin", sans-serif
-		margin-bottom: 25px
-
+		color: lighten($text-color, 38%)
+		font: 20px/1.2 "RobotoThin", sans-serif
+		margin-bottom: 24px
+		a
+			color: lighten($text-color, 38%)
+			margin: 0 13px
+			&:hover
+				color: lighten($text-color, 38%)
+				text-decoration: underline
+			&:first-child
+				margin-left: 0
+		b
+			font-weight: normal
+			margin: 0 13px
+		span
+			color: $text-color
+			font-size: 24px
+		
 h3
 	font-size: 18px
 	margin:
@@ -44,19 +62,24 @@ h4
 	line-height: 24px
 	text-transform: uppercase
 
-
 a
 	color: $text-color
 	transition: all .5s ease
 	&:hover
-		color: $accent-color
-		opacity: .7
+		color: lighten($accent-color, 4%)
 	&:focus,
 	&:hover,
 	&:active
 		outline: none
 		text-decoration: none
 
+.text-block
+	a
+		color: darken($accent-color, 10%)
+		opacity: .85
+		text-decoration: underline dotted
+		&:hover
+			color: lighten($accent-color, 4%)
 p
 	margin:
 		top: 0
@@ -82,12 +105,10 @@ ul
 			opacity: 0
 			transition: opacity .1s ease
 		&:hover
-			opacity: 1
 			&::before
 				opacity: .7
 
 .button 
-	display: inline-block
 	width: 100%
 	color: #fff
 	font: 14px/1 "PTSans",sans-serif
@@ -121,7 +142,6 @@ section.content
 	vertical-align: middle
 
 form
-	position: relative
 	font: 13px/18px "PTSans", sans-serif
 	text-align: center
 	h4
@@ -148,28 +168,45 @@ form
 		border-radius: 2px
 		border: 1px solid #dcdcdc
 		box-shadow: inset 0 0 4px rgba(0,0,0,.15)
+
 	input
 		height: 40px
 
-.user-agreement
+.ConfirmRules-wrap
 	position: relative
 	text-align: left
+	display: inline-block
+	float: left
 	margin:
 		top: 5px 
-		bottom: 8px
-	i
-		display: inline-block
-		position: relative
-		color: $accent-color
-		font-size: 14px
-		margin-right: 8px
+		bottom: 13px
+	.checkbox
+		display: none
+		float: left
+	label
 		cursor: pointer
-	a
-		color: $accent-color
-		text-decoration: underline
-		opacity: .7
-		&:hover
-			color: lighten($accent-color, 15%)
+		a
+			color: $accent-color
+			opacity: .9
+			text-decoration: underline
+			&:hover
+				color: lighten($accent-color, 16%)
+	input[type='checkbox'] + label:before
+		content: ''
+		width: 11px
+		height: 11px
+		display: inline-block
+		margin-right: 5px
+		background: url(../img/checkbox.svg) no-repeat	
+		background-size: cover
+	input[type='checkbox']:checked + label:before
+		content: ''
+		width: 11px
+		height: 11px
+		display: inline-block
+		margin-right: 5px
+		background: url(../img/checkbox-checked.svg) no-repeat	
+		background-size: cover
 
 header
 	background: url(../img/header-bg.png) top center no-repeat
@@ -187,10 +224,8 @@ header
 
 
 	.contacts-bar
-		position: relative
-		top: 46px
+		margin-top: 46px
 		text-align: right
-		margin-left: 109px
 		float: right
 		i
 			color: $accent-color
@@ -199,37 +234,37 @@ header
 			color: #aeb2b4
 			font: 12px "PTSans", sans-serif
 			margin: 3px 0 0 0
-
-	.phone,
-	.email
-		p
-			color: #595959
-			font: 22px "PTSans", sans-serif
-			margin:
-				top: 0
-				left: 7px
-		span
-			font-size: 20px
-			color: $accent-color
-			opacity: .5
-		a
-			color: #595959
-			font: 17px "PTSans", sans-serif
-			transition: all .5s ease
-			&:hover
-				color: $accent-color
-				opacity: .5
-				text-decoration: none
-
-	.email
-		margin-top: 8px
+		.phone,
+		.email
+			a
+				color: #595959
+				font: 17px "PTSans", sans-serif
+				margin:
+					top: 0
+					left: 7px
+		.phone
+			a
+				font: 21px "PTSans", sans-serif
+				span
+					font-size: 19px
+					color: $accent-color
+					opacity: .5
+				&:hover
+					color: #595959
+		.email
+			margin-top: 8px
+			a
+				transition: all .5s ease
+				&:hover
+					color: $accent-color
+					opacity: .5
 
 	h1
-		margin-top: 120px
+		margin-top: 55px
 
 	form
 		max-width: 360px
-		top: 70px
+		margin-top: 55px
 		display: inline-block
 		background-color: #f7f7f7
 		border-radius: 8px
@@ -239,30 +274,74 @@ header
 		h4
 			color: #8a8a8a
 
+@import "app/libs/superfish/dist/css/superfish"
+
 .main-nav
 	display: inline-block
 	width: 100%
 	background-color: darken($accent-color, 5%)
-	box-shadow: inset 0 0 4px rgba(0,0,0,.25)
-	ul
+	box-shadow: inset 0 0 4px rgba(0,0,0,.07)
+	ul.sf-menu
 		display: table
 		width: 100%
-	li
-		display: table-cell
-		text-align: center
-		&.active
-			background-color: darken($accent-color, 10%)
-			box-shadow: inset 0 0 4px rgba(0,0,0,.05)
-		a
-			display: block
-			color: #fff
-			font: 14px/1 "PTSans", sans-serif
-			font-weight: 600
-			text-transform: uppercase
-			padding: 18px 0 15px
-			&:hover
-				background-color: $accent-color
-				opacity: 1
+		margin-bottom: 0
+		li
+			display: table-cell
+			text-align: center
+			background-color: transparent
+			float: none
+			&.active
+				background-color: darken($accent-color, 10%)
+				box-shadow: inset 0 0 4px rgba(0,0,0,.05)
+			a
+				display: block
+				color: #fff
+				font: 14px/1 "PTSans", sans-serif
+				font-weight: 600
+				text-transform: uppercase
+				padding: 18px 0 15px
+				border: none
+				&:hover
+					background-color: $accent-color
+		ul
+			background-color: #f2f2f2
+			// box-shadow: 0 0 6px rgba(0,0,0,.15)
+			li
+				display: list-item
+				text-align: left
+				a
+					color: $text-color
+					font: 18px "RobotoLight"
+					font-weight: normal
+					padding: 15px 45px 16px 17px
+					text-transform: none
+					border-bottom: 1px solid darken(#e5e5e5, 3%)
+					&:after
+						border-left-color: darken(#e5e5e5, 20%)
+					&:before
+						content: ''
+						height: 100%
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						background-color: #313131
+						opacity: .0
+						transition: opacity .2s ease
+					&:visited
+						&:after
+							border-left-color: darken(#e5e5e5, 20%)
+					&:hover
+						background-color: transparent
+						&:after
+							border-left-color: darken(#e5e5e5, 20%)
+						&:before
+							opacity: .04
+				&:last-child
+					a
+						border-bottom: none
+					
+						
 		
 button.menu
 	display: inline-block

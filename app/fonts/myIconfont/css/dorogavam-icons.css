@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'dorogavam-services-iconfont';
-  src: url('../libs/myIconfont/font/dorogavam-services-iconfont.eot?70941788');
-  src: url('../libs/myIconfont/font/dorogavam-services-iconfont.eot?70941788#iefix') format('embedded-opentype'),
-       url('../libs/myIconfont/font/dorogavam-services-iconfont.woff2?70941788') format('woff2'),
-       url('../libs/myIconfont/font/dorogavam-services-iconfont.woff?70941788') format('woff'),
-       url('../libs/myIconfont/font/dorogavam-services-iconfont.ttf?70941788') format('truetype'),
-       url('../libs/myIconfont/font/dorogavam-services-iconfont.svg?70941788#dorogavam-services-iconfont') format('svg');
+  font-family: 'dorogavam-icons';
+  src: url('../fonts/myIconfont/font/dorogavam-icons.eot?62083655');
+  src: url('../fonts/myIconfont/font/dorogavam-icons.eot?62083655#iefix') format('embedded-opentype'),
+       url('../fonts/myIconfont/font/dorogavam-icons.woff2?62083655') format('woff2'),
+       url('../fonts/myIconfont/font/dorogavam-icons.woff?62083655') format('woff'),
+       url('../fonts/myIconfont/font/dorogavam-icons.ttf?62083655') format('truetype'),
+       url('../fonts/myIconfont/font/dorogavam-icons.svg?62083655#dorogavam-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,14 +14,14 @@
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: 'dorogavam-services-iconfont';
-    src: url('../font/dorogavam-services-iconfont.svg?70941788#dorogavam-services-iconfont') format('svg');
+    font-family: 'dorogavam-icons';
+    src: url('../font/dorogavam-icons.svg?62083655#dorogavam-icons') format('svg');
   }
 }
 */
  
  [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "dorogavam-services-iconfont";
+  font-family: "dorogavam-icons";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -62,3 +62,4 @@
 .icon-5:before { content: '\e804'; } /* '' */
 .icon-6:before { content: '\e805'; } /* '' */
 .icon-7:before { content: '\e806'; } /* '' */
+.icon-clov:before { content: '\e807'; } /* '' */

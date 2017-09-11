@@ -48,11 +48,11 @@
 			
 			<div class="row">
 		
-				<div class="col-md-5 col-sm-5  col-xs-12">
+				<div class="col-md-6 col-sm-6  col-xs-12">
 					<a href="#" class="logo"><img src="img/logo.png" alt=""></a>
 				</div>
 
-				<div class="col-md-7 col-sm-7 col-xs-12">
+				<div class="col-md-6 col-sm-6 col-xs-12">
 
 					<div class="contacts-bar">
 
@@ -63,11 +63,11 @@
 							</div>
 
 							<div class="cell">
-								<p><span>8 (919)</span> 189-45-16,</p> 
+								<a href="tel:88007754639"><span>8 (800)</span> 775-46-39</a> 
 							</div>
 
 							<div class="cell">
-								<p><span>8 (919)</span> 189-45-16</p> 
+								<a href="tel:89191894516"><span>8 (919)</span> 189-45-16</a> 
 							</div>
 
 						</div>
@@ -76,7 +76,7 @@
 
 						<div class="email">
 							<i class="fa fa-envelope-o"></i>
-							<a href="#">info.dorogavam.ru</a>
+							<a href="mailto:info.dorogavam.ru">info.dorogavam.ru</a>
 						</div>
 
 					</div>
@@ -94,20 +94,15 @@
 							<p>Заполните форму и наш менеджер свяжется с Вами через <span>15 минут</span></p>
 							<label>
 								<p>Ваше имя:</p>
-								<input type="text">
+								<input type="text" name="name">
 							</label>
 							<label>
 								<p>Ваш телефон:</p>
-								<input type="text">
+								<input type="text" name="tel" required>
 							</label>
-							<div class="user-agreement">
-								<div class="cell">
-									<input type="checkbox"></input>
-									<span></span>
-								</div>
-								<div class="cell">
-									<p>Принимаю условия <a href="#">Пользовательского соглашения</a></p>
-								</div>
+							<div class="ConfirmRules-wrap">
+								<input type="checkbox" id="ConfirmRules" Name="ConfirmRules" class="checkbox" required>
+								<label for="ConfirmRules">Принимаю условия <a href="#">Пользовательского соглашения</a></label>
 							</div>
 							<button class="button">Отправить заявку</button>
 						</form>
@@ -133,11 +128,31 @@
 						<button class="menu">Меню</button>
 					</div>
 					
-					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="services.html">Услуги</a></li>
+					<ul class="sf-menu">
+						<li class="active"><a href="index.html">Главная</a></li>
+						<li>
+							<a href="services.html">Услуги</a>
+							<ul>
+								<li>
+									<a href="avtoperevozki.html">Автоперевозки в разных направлениях</a>
+									<ul>
+										<li><a href="avtoperevozki_po_voronezhu.html">По Воронежу</a></li>
+										<li><a href="avtoperevozki_po_voronezhu.html">По Воронежской Области</a></li>
+										<li><a href="avtoperevozki_po_voronezhu.html">По России</a></li>
+										<li><a href="avtoperevozki_po_voronezhu.html">Страны СНГ</a></li>
+										<li><a href="avtoperevozki_po_voronezhu.html">Страны Европы</a></li>
+									</ul>
+								</li>
+								<li><a href="avtoperevozki.html">Доставка попутных грузов</a></li>
+								<li><a href="avtoperevozki.html">Перевозка негабаритных грузов</a></li>
+								<li><a href="avtoperevozki.html">Перевозка сборных грузов</a></li>
+								<li><a href="avtoperevozki.html">Перевозка опасных грузов</a></li>
+								<li><a href="avtoperevozki.html">Рефрежираторные перевозки</a></li>
+								<li><a href="avtoperevozki.html">Страхование грузов</a></li>
+							</ul>
+						</li>
 						<li><a href="documents.html">Документы</a></li>
-						<li class="active"><a href="reviews.html">Отзывы</a></li>
+						<li><a href="reviews.html">Отзывы</a></li>
 						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				
@@ -151,7 +166,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="page-name">Отзывы</h2>
+					<h2 class="page-name"><span>Отзывы</span></h2>
 				</div>
 			</div>
 		</div>
@@ -165,21 +180,16 @@
 						<h4>оставьте свой отзыв</h4>
 						<label for="#">
 							<i class="fa fa-user"></i>
-							<input type="text" placeholder="Ваше имя">
+							<input type="text" name="name" placeholder="Ваше имя" required>
 						</label>
 						<label for="#">
 							<i class="fa fa-map-marker"></i>
-							<input type="text" placeholder="Ваш город">
+							<input type="text" name="city" placeholder="Ваш город">
 						</label>
-						<textarea placeholder="Ваш комментарий"></textarea>
-						<div class="user-agreement">
-							<div class="cell">
-								<input type="checkbox"></input>
-								<span></span>
-							</div>
-							<div class="cell">
-								<p>Принимаю условия <a href="#">Пользовательского соглашения</a></p>
-							</div>
+						<textarea placeholder="Ваш комментарий" name="comment" rerquired></textarea>
+						<div class="ConfirmRules-wrap">
+							<input type="checkbox" id="ReviewsConfirmRules" Name="ReviewsConfirmRules" class="checkbox" required>
+							<label for="ReviewsConfirmRules">Принимаю условия <a href="#">Пользовательского соглашения</a></label>
 						</div>
 						<button class="button">Отправить</button>
 					</form>
@@ -264,8 +274,8 @@
 											<i class="fa fa-phone"></i>
 										</div>
 										<div class="cell top">
-											<p><span>8 (919) 189-45-16</span></p>
-											<p><span>8 (800) 775-46-39</span></p>
+											<a href="tel:89191894516"><span>8 (919) 189-45-16<br></span></a>
+											<a href="tel:88007754639"><span>8 (800) 775-46-39</span></a>
 										</div>
 									</div>
 
@@ -274,7 +284,7 @@
 											<i class="fa fa-envelope-o"></i>
 										</div>
 										<div class="cell top">
-											<a href="#">info.dorogavam.ru</a>
+											<a href="mailto:info.dorogavam.ru">info.dorogavam.ru</a>
 										</div>
 									</div>
 

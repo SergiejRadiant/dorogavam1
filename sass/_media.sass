@@ -17,14 +17,15 @@
 			top: 36px
 		.phone,
 		.email
-			p
-				font-size: 17px
-			span
-				font-size: 17px
 			a
-				font-size: 16px
+				font-size: 16px!important
+			span
+				color: lighten($accent-color, 5%)
+				font-size: 18px!important
+				opacity: 1!important
 		.email
 			margin-top: 4px
+		
 		.form-wraper
 			text-align: center
 			form
@@ -34,7 +35,6 @@
 		.logo
 			width: 225px
 			left: 0
-
 	.footer-contacts
 		float: right
 	.footer-social
@@ -46,7 +46,6 @@
 			display: none
 		img
 			height: 38px!important
-
 	.footer-contacts-item a,
 	.footer-contacts-item p
 		font-size: 17px!important
@@ -69,7 +68,10 @@
 				opacity: 1!important
 			span
 				font-size: 20px
-
+	
+	.services
+		.text-block
+			padding: 0 0 20px 0
 
 
 /* Small Devices, Tablets */
@@ -79,14 +81,12 @@
 		.contacts-bar
 			text-align: left
 			float: left
-			margin: 0 auto
 			.phone,
-			.email
-				p
+				a
 					margin-bottom: 3px
-					color: $text-color
 				span
 					opacity: 1
+			.email
 				a
 					color: $text-color
 					&:hover,
@@ -96,8 +96,11 @@
 						opacity: 1
 
 	.main-nav
-		ul
+		ul.sf-menu
 			display: none
+
+	section.content
+		padding-top: 23px
 
 	.footer-contacts
 		float: left
@@ -109,8 +112,7 @@
 			right: 0!important
 			bottom: 50px!important
 
-
-	/*Disable Animation on Mobile Devices*/
+		/*Disable Animation on Mobile Devices*/
 	// .animated
 	// 	/*CSS transitions*/
 	// 	-o-transition-property: none !important
