@@ -50,9 +50,10 @@ $(function() {
 		closeOnContentClick: true,
 		closeBtnInside: false,
 		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom',
+		mainClass: 'mfp-with-zoom mfp-align-top',
 		image: {
-			verticalFit: true
+			verticalFit: false,
+			cursor: 'null'
 		},
 		zoom: {
 			enabled: true,
