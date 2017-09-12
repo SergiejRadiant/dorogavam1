@@ -98,4 +98,38 @@ $(function() {
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
+
+	/************** Mobile nav *******************/
+	var mobileUL = $(".cloned > ul > li").clone();
+		 $("#mobile-nav ul").append(mobileUL);
+		 
+	//Option of mobile-menu
+	 $("#mobile-nav").mmenu({
+    	extensions:['widescreen','theme-white','effect-menu-slide','pagedim-black'],
+    	navbar:{
+    		title: "Меню"
+    	}
+    });
+
+	//Hamburger click handler
+	var mmApi = $("#mobile-nav").data( "mmenu" );
+ 	mmApi.bind("closed",function(){
+ 		//$(".sandwich").removeClass("active");
+ 	});
+
+	
+ 	$("#mobile-menu-btn").click(function() {
+
+ 		
+ 		/*if($(".sandwich").hasClass("active"))
+ 		{
+ 			mmApi.close();
+ 			return false;
+ 		}
+ 		$(".sandwich").toggleClass("active");*/
+ 		mmApi.open();
+ 		return false;
+ 	});
+ 	/*********************************************/
+
 });
