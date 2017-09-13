@@ -114,19 +114,13 @@ $(function() {
 	//Hamburger click handler
 	var mmApi = $("#mobile-nav").data( "mmenu" );
  	mmApi.bind("closed",function(){
- 		//$(".sandwich").removeClass("active");
+ 		$("#mobile-menu-btn").toggleClass("is-active");
  	});
 
 	
  	$("#mobile-menu-btn").click(function() {
 
- 		
- 		/*if($(".sandwich").hasClass("active"))
- 		{
- 			mmApi.close();
- 			return false;
- 		}
- 		$(".sandwich").toggleClass("active");*/
+ 		$(this).toggleClass("is-active");
  		mmApi.open();
  		return false;
  	});
