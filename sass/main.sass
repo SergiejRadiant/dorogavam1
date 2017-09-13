@@ -449,6 +449,19 @@ footer
 				width: 100%
 				height: auto
 
+//css-hamburger options
+.mmenu-wrap
+	display: none
+	>span
+		position: absolute
+		top: 38%
+		left: 46.4%
+		font: 15px/1 "PTSans", sans-serif
+		font-weight: 600
+		text-transform: uppercase
+	.hamburger
+		background-color: darken($accent-color, 10%)!important
+
 
 //Mobile menu options
 #mobile-menu
@@ -463,9 +476,9 @@ body
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
 @import "app/libs/font-awesome/css/font-awesome.min"
-@import "app/libs/mobile-menu/css/mobile-menu"
 @import "app/libs/checkbox-styles/checkbox-styles"
 @import "app/libs/magnific-popup/dist/magnific-popup"
 @import "app/libs/magnific-popup/dist/mySettings"
 @import "app/fonts/myIconfont/css/dorogavam-icons"
 @import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all"
+@import "app/libs/css-hamburgers/_sass/hamburgers/hamburgers.scss"
