@@ -1,10 +1,37 @@
 $(function() {
 
+	$(".partners .owl-carousel").owlCarousel({
+		loop:true,
+		stagePadding:40,
+		navText:false,
+		margin:40,
+		dots:false,
+		responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:2,
+            nav:true
+        },
+        732:{
+            items:3,
+            nav:true
+        },	
+        1000:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+	});
 
 	jQuery(document).ready(function(){
 		jQuery('ul.sf-menu').supersubs({
 			minWidth:	12,	 // minimum width of submenus in em units
-			maxWidth:	34,	 // maximum width of submenus in em units
+			maxWidth:	54,	 // maximum width of submenus in em units
 			extraWidth:	1	 // extra width can ensure lines don't sometimes turn over
 							 // due to slight rounding differences and font-family
 		}).superfish();		 // call supersubs first, then superfish, so that subs are

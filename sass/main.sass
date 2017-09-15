@@ -39,12 +39,40 @@ body textarea:required:valid
 			font-weight: normal
 			padding-left: 25px
 
+.partners
+	h2
+		margin-bottom: 0
+	.owl-carousel
+		padding: 108px 0
+		//border: 1px rgba(218,218,218,.5) solid
+		.owl-stage
+			text-align: center
+			div
+				display: inline-block
+				max-height: 112px
+		.owl-nav
+			div
+				position: absolute
+				top: 44%
+				left: 0
+				width: 9px
+				height: 16px
+				background-size: contain
+				background: url(../img/arrow.svg) no-repeat
+				opacity: .15
+				transition: opacity .1s ease
+				&:hover
+					opacity: .24
+			.owl-next
+				left: auto
+				right: 0
+				transform: scale(-1, 1)
+				
+		
 .pay-methods
-	h3
-		margin: 22px 0 30px 0
 	&-list-of-items
 		max-width: 750px
-		margin: 0 auto
+		margin: 64px auto 0
 		text-align: justify
 		&::after
 			content: ''
@@ -56,8 +84,10 @@ body textarea:required:valid
 		text-align: center
 		vertical-align: top
 		margin: 0 54px 54px 0
+		h4
+			margin-bottom: 0
 		img
-			height: 114px
+			height: 76px
 			width: auto
 			margin-bottom: 44px
 
@@ -137,8 +167,10 @@ footer
 		background-color: $accent-color-2
 		padding: 15px 0
 		ul
+			margin: 0 0 0 0
 			display: inline-block
 			li
+				margin-bottom: 0
 				float: left
 				margin-right: 28px
 				a
@@ -154,10 +186,10 @@ footer
 			margin-bottom: 0
 
 .docs-list-of-item
-	margin: 48px 0 89px 0
+	margin: 83px 0 40px
 	vertical-align: top
 	.docs-item
-		width: 356px
+		width: 366px
 		margin-bottom: 65px
 		display: inline-block
 	.doc-wrapper
@@ -191,7 +223,7 @@ footer
 			&::before
 				opacity: 1
 	h4
-		font-size: 16px
+		font-size: 15px
 		line-height: 1.5
 		margin-top: 10px
 		margin-bottom: 4px
@@ -283,6 +315,8 @@ footer
 		position: absolute
 		left: 55%
 		background-color: #d1d1d1
+	h2
+		font-size: 21px
 	h2.kostyl
 		margin-bottom: 63px
 	table tr td:first-child
@@ -326,11 +360,12 @@ footer
 
 .services
 	&-menu
-		margin-bottom: 25px
+		margin: 25px 0 0 0
 		border-radius: 6px
 		background-color: #f2f2f2
 		box-shadow: inset 0 0 15px rgba(0,0,0,.04)
 		li
+			margin-bottom: 0
 			position: relative
 			&::after
 				content: ''
@@ -438,7 +473,7 @@ footer
 	
 	.text-block
 		position: relative
-		padding: 0 0 20px 30px
+		padding: 0 0 30px
 		.img-wrap
 			width: 100%
 			height: auto
@@ -482,3 +517,4 @@ body
 @import "app/fonts/myIconfont/css/dorogavam-icons"
 @import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all"
 @import "app/libs/css-hamburgers/_sass/hamburgers/hamburgers.scss"
+@import "app/libs/owl-carousel/dist/assets/owl.carousel.min"

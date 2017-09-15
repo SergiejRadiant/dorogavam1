@@ -7,6 +7,11 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	
+	.pay-methods
+		&-list-of-items
+			margin: 54px 0 0 54px
+
 	header
 		.logo
 			left: 0
@@ -20,9 +25,7 @@
 			a
 				font-size: 16px!important
 			span
-				color: lighten($accent-color, 5%)
 				font-size: 18px!important
-				opacity: 1!important
 		.email
 			margin-top: 4px
 		
@@ -84,8 +87,6 @@
 			.phone,
 				a
 					margin-bottom: 3px
-				span
-					opacity: 1
 			.email
 				a
 					color: $text-color
@@ -135,10 +136,21 @@
 	// 	-ms-animation: none !important
 	// 	animation: none !important
 
+@media only screen and (max-width : 748px)
+	.pay-methods-list-of-items
+		margin-left: 90px
+	.pay-methods-item
+		margin-right: 90px
+		text-align: left
+		img
+			height: 68px
 
-@media only screen and (max-width : 694px)
-	.pay-methods-list-of-item
-		max-width: 522px
+@media only screen and (max-width : 633px)
+	.pay-methods-list-of-items
+		margin-left: 0
+	.pay-methods-item
+		width: 100%
+		text-align: center
 
 @media only screen and (max-width : 514px)
 	.reviews-form-section
@@ -152,16 +164,23 @@
 				color: $text-color
 				opacity: .4
 				line-height: 40px
-			
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	.pay-methods-list-of-item
+	.docs-item
+		width: 100%!important
 		text-align: center
-	.pay-methods-item
-		width: 100%
-		margin-right: 0
-	
+		.cell
+			display: block
+		.doc-wrapper
+		h4
+			margin-top: 25px
+			margin-left: 0!important
+		p
+			margin-left: 0!important
+		
+
+		
 	.contacts-section
 		.social
 			li
@@ -173,6 +192,9 @@
 		>span
 			left: 42.4%
 
+	.tizers-list-of-items 
+		.tizers-item
+			margin: 0 8% 80px 0
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
