@@ -328,6 +328,8 @@ header
 				text-transform: uppercase
 				padding: 18px 0 15px
 				border: none
+				&:after
+					transition: all .2s ease
 				&:hover
 					background-color: $accent-color
 		ul
@@ -343,7 +345,7 @@ header
 					text-transform: none
 					border-bottom: 1px solid darken(#e5e5e5, 3%)
 					&:after
-						border-left-color: darken(#e5e5e5, 20%)
+						border-left-color: darken(#e5e5e5, 20%)!important
 					&:before
 						content: ''
 						height: 100%
