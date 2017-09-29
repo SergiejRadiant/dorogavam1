@@ -372,13 +372,10 @@ header
 								border-left-color: darken(#e5e5e5, 20%)
 					&.active
 						background-color: transparent
-						box-shadow: none
-						a:before
-							opacity: .04
-						ul
-							li
-								a:before
-									opacity: .0
+						>a
+							&:before
+								opacity: .04
+	
 					&:last-child
 						a
 							border-bottom: none
