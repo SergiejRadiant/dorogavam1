@@ -367,12 +367,14 @@ header
 						&:focus
 							&:after
 								border-left-color: darken(#e5e5e5, 20%)
-					&.active
-						a
+						&:active
 							&:after
 								border-left-color: darken(#e5e5e5, 20%)
-							&:before
-								opacity: .04	
+					&.active
+						background-color: transparent
+						box-shadow: none
+						a:before
+							opacity: .04
 					&:last-child
 						a
 							border-bottom: none
