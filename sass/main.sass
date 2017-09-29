@@ -288,24 +288,65 @@ footer
 			background: url(../img/reviews-checkbox-checked.svg) no-repeat	
 			background-size: cover
 
-.reviews-item
-	padding: 15px 0 7px 0
-	h4
-		font-family: "RobotoLight", sans-serif
-		text-transform: none
-		margin-bottom: 7px
-		b
-			font-family: "RobotoMedium", sans-serif
-			font-weight: normal
-			text-transform: uppercase
-	& span, a
-		color: $accent-color
-		opacity: .8
-	p
-		margin-bottom: 7px
+.reviews-main-section
+	.reviews-item
+		padding: 15px 0 7px 0
+		h4
+			font-family: "RobotoLight", sans-serif
+			text-transform: none
+			margin-bottom: 7px
+			b
+				font-family: "RobotoMedium", sans-serif
+				font-weight: normal
+				text-transform: uppercase
+		& span, a
+			color: $accent-color
+			opacity: .8
+		p
+			margin-bottom: 7px
 
-	&:nth-child(even)
-		background-color: #f5f5f5
+		&:nth-child(even)
+			background-color: #f5f5f5
+	nav
+		width: 100%
+		text-align: center
+		.pagination
+			display: inline-block
+			margin: 30px 0 25px
+			.page-item
+				background: none
+				float: left
+				padding: 0
+				margin: 0
+				&.active
+					.page-link
+						z-index: 2
+						color: #fff
+						background-color: darken($accent-color, 10%)
+						border-color: darken($accent-color, 10%)
+						opacity: .85
+						&:hover
+							background-color: darken($accent-color, 10%)
+				.page-link
+					position: relative
+					display: block
+					padding: 8px 13px
+					margin-left: -1px
+					line-height: 1.25
+					background-color: #fff
+					border: 1px solid #d4d1d1
+					&:hover
+						background-color: #ededed
+				&:first-child
+					.page-link
+						border-bottom-left-radius: 6px
+						border-top-left-radius: 6px
+				&:last-child
+					.page-link
+						border-bottom-right-radius: 6px
+						border-top-right-radius: 6px
+
+
 
 .contacts-section
 	padding: 35px 0
