@@ -331,50 +331,51 @@ header
 					transition: all .2s ease
 				&:hover
 					background-color: $accent-color
-		ul
-			background-color: #f2f2f2
-			li
-				display: list-item
-				text-align: left
-				a
-					color: $text-color
-					font: 17px "RobotoLight"
-					font-weight: normal
-					padding: 15px 45px 16px 17px
-					text-transform: none
-					border-bottom: 1px solid darken(#e5e5e5, 3%)
-					&:after
-						border-left-color: darken(#e5e5e5, 20%)!important
-					&:before
-						content: ''
-						height: 100%
-						position: absolute
-						top: 0
-						left: 0
-						width: 100%
-						background-color: #313131
-						opacity: .0
-						transition: opacity .2s ease
-					&:visited
-						&:after
-							border-left-color: darken(#e5e5e5, 20%)
-					&:hover
-						background-color: transparent
-						&:after
-							border-left-color: darken(#e5e5e5, 20%)
-						&:before
-							opacity: .04
-					&:focus
-						&:after
-							border-left-color: darken(#e5e5e5, 20%)
-					&:active
-						&:after
-							border-left-color: darken(#e5e5e5, 20%)
-						&:before
-							opacity: .04	
-				&:last-child
+			ul
+				background-color: #f2f2f2
+				li
+					display: list-item
+					text-align: left
 					a
-						border-bottom: none
+						color: $text-color
+						font: 17px "RobotoLight"
+						font-weight: normal
+						padding: 15px 45px 16px 17px
+						text-transform: none
+						border-bottom: 1px solid darken(#e5e5e5, 3%)
+						&:after
+							border-left-color: darken(#e5e5e5, 20%)!important
+						&:before
+							content: ''
+							height: 100%
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							background-color: #313131
+							opacity: .0
+							transition: opacity .2s ease
+						&:visited
+							&:after
+								border-left-color: darken(#e5e5e5, 20%)
+						&:hover
+							background-color: transparent
+							&:after
+								border-left-color: darken(#e5e5e5, 20%)
+							&:before
+								opacity: .04
+						&:focus
+							&:after
+								border-left-color: darken(#e5e5e5, 20%)
+					&.active
+						a
+							&:after
+								border-left-color: darken(#e5e5e5, 20%)
+							&:before
+								opacity: .04	
+					&:last-child
+						a
+							border-bottom: none
 					
 
 
