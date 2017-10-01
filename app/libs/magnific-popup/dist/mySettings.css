@@ -33,7 +33,7 @@
   opacity: 0;
 }
 
-#small-dialog {
+#small-dialog, #review-dialog {
   background: white;
   padding: 9px 30px;
   text-align: center;
@@ -43,7 +43,7 @@
   position: relative;
 }
 
-#small-dialog h1 {
+#small-dialog h1, #review-dialog h1 {
   font-family: "PTSans", sans-serif;
   font-weight: normal;
   text-shadow: none;
@@ -51,7 +51,7 @@
   margin: 10px 0 9px 0;
 }
 
-#small-dialog p {
+#small-dialog p, #review-dialog p{
   margin-bottom: 14px;
 }
 
